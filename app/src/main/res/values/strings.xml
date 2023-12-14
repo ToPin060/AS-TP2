@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AS-TP2</string>
-    <string name="text_view_default_text">Ce que je veux</string>
+    <string name="textview1_default_text">Ce que je veux</string>
+    <string name="button1_name">TOTO</string>
 </resources>
