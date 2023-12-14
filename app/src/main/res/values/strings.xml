@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">AS-TP2</string>
+
     <string name="textview1_default_text">Ce que je veux</string>
     <string name="button1_name">TOTO</string>
+
+    <string name="menu_item_app_name">App</string>
+    <string name="menu_item_quit_name">Quiter</string>
 </resources>

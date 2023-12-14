@@ -3,9 +3,10 @@ package helloandroid.ut3.com.as_tp2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,5 +36,25 @@ public class MainActivity extends AppCompatActivity {
 
         // Hide image
         iv.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.totomenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.menu_item_app) {
+            tv.setText("" + getString(R.string.menu_item_app_name));
+            return true;
+        }
+        if (item.getItemId() == R.id.menu_item_quit) {
+            System.exit(0);
+            return true;
+        }
+        return false;
     }
 }
