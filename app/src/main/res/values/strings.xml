@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AS-TP2</string>
+    <string name="text_view_default_text">Ce que je veux</string>
 </resources>
