@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private int counter = 0;
     private TextView tv = null;
+    private ImageView iv = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,25 +25,15 @@ public class MainActivity extends AppCompatActivity {
         tv = (TextView) findViewById(R.id.textView1);
         tv.setText("Bienvenue chez vous");
 
-        // Button personalization (JAVA way)
-        /*
-        Button b = (Button) findViewById(R.id.button1);
-        b.setOnClickListener(monEcouteur);
-        */
+        iv = (ImageView) findViewById(R.id.imageView1);
     }
 
-    // Button callback (JAVA way)
-    /*
-    private View.OnClickListener monEcouteur = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Log.d("button1", "pressed!");
-        }
-    };
-    */
-
     public void mehtodeBouton(View view) {
+        // Update counter
         counter++;
         tv.setText("" + counter);
+
+        // Hide image
+        iv.setVisibility(View.INVISIBLE);
     }
 }
